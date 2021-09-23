@@ -12,39 +12,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Omurbek Arykbaev</title>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="header__navbar">
-                <div><a href="#" class="hum-menu"><span></span></a></div>
-                <li><a class="header__navbar-links" href="#">Gmail</a></li>
-                <li><a class="header__navbar-links" href="https://tlgg.ru/@Twonpix">Telegram</a></li>
-                <li><a class="header__navbar-links" href="https://github.com/OmurbekArykbaev">GitHub</a></li>
-            </nav>
+        <div class="container" id="container">
+            <div class="header__inner">
+                <div class="header__inner">
+                <div class="humburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="header__navbar">
+                    <li><a class="header__navbar-links" href="#">Gmail</a></li>
+                    <li><a class="header__navbar-links" href="https://tlgg.ru/@Twonpix">Telegram</a></li>
+                    <li><a class="header__navbar-links" href="https://github.com/OmurbekArykbaev">GitHub</a></li>
+                </nav>
 
-            <div class="header__about">
+                <div class="header__about">
 
-                <div class="header__about-img">
-                    <img src="/img/about.jpg" alt="">
+                    <div class="header__about-img">
+                        <img src="/img/about.jpg" alt="">
+                    </div>
+
+                    <div class="header__wall"></div>
+
+                    <div class="header__about-description">
+                        <h2>Привет.</h2>
+                        <p>Я Омурбек, мне 22 года. <br> Увлекаюсь и занимаюсь программированием, а именно  Front-End направлением. Более подробные информации можно получить снизу по ссылкам.</p>
+                    </div>
+
                 </div>
 
-                <div class="header__about-description">
-                    <h2>Привет.</h2>
-                    <p>Я Омурбек, мне 22 года. <br> Увлекаюсь и занимаюсь программированием, а именно  Front-End направлением. Более подробные информации можно получить снизу по ссылкам.</p>
+                <div class="header__links">
+                    <a class="header__links-link" href="/pages/main_portfolio.html">Портфолио</a>
+                    <a class="header__links-link process" href="#" onclick="return false">Блог</a>
+                    <a class="header__links-link" href="#">Обо мне</a>
                 </div>
-
-            </div>
-
-            <div class="header__links">
-                <a class="header__links-link" href="#">Портфолио</a>
-                <a class="header__links-link" href="#">Блог</a>
-                <a class="header__links-link" href="#">Обо мне</a>
             </div>
         </div>
     </header>
 
+    <script src="/js/humburger.js"></script>
     <script src="https://kit.fontawesome.com/2bd1cd0f0f.js" crossorigin="anonymous"></script>
 </body>
 </html>
