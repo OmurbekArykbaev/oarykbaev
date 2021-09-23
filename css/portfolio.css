@@ -73,6 +73,8 @@
   width: 100%;
   height: 20%;
   background-color: #8a8a8a;
+  border: 1px solid #aaaaaa;
+  border-radius: 0 0 10px 10px;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
@@ -81,6 +83,18 @@
 }
 
 @media (max-width: 768px) {
+  .cart {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .section__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cart {
+    margin-right: 0;
+  }
   .humburger {
     width: 80px;
     height: 80px;
@@ -124,5 +138,18 @@
   .header__navbar.slide {
     transition: all 0.5s ease-in-out;
     transform: translate(0%, 0%);
+  }
+}
+
+@media (max-width: 350px) {
+  .cart {
+    width: 100%;
+  }
+  .cart__title {
+    font-size: 30px;
+  }
+
+  .cart__desc {
+    font-size: 14px;
   }
 }
