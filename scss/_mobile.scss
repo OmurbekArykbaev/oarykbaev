@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .main-content {
+    background-color: red;
+    justify-content: center;
+  }
+
+  .bio {
+    display: flex;
+
+    width: 100px;
+    height: 156px;
+  }
+}
+
+@media (max-width: 470px) {
+  .main-content {
+    background-color: blue;
+    justify-content: center;
+
+    img {
+      width: 156px;
+      height: 156px;
+    }
+  }
+}

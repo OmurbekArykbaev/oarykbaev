@@ -1,60 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>Omurbek Arykbaev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./scss/app.css">
+    <title>Omurbek | Junior Software Engineer</title>
 </head>
 <body>
     <header class="header">
-        <div class="container" id="container">
-            <div class="header__inner">
-                <div class="header__inner">
-                <div class="humburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <nav class="header__navbar">
-                    <li><a class="header__navbar-links" href="#">Gmail</a></li>
-                    <li><a class="header__navbar-links" href="https://tlgg.ru/@Twonpix">Telegram</a></li>
-                    <li><a class="header__navbar-links" href="https://github.com/OmurbekArykbaev">GitHub</a></li>
-                </nav>
+        <nav class="nav">
+            <ul class="nav__inner">
+                <li class="nav__item"><a href="./index.html" class="nav__link-logo">Arykbaev</a></li>
+                <li class="nav__item"><a href="#" class="nav__link-active">Обо мне</a></li>
+                <li class="nav__item"><a href="./works.html" class="nav__link">Работы</a></li>
+            </ul>
+        </nav>
+        <article class="main-content">
+            <img class="avatar" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Avatar">
 
-                <div class="header__about">
-
-                    <div class="header__about-img">
-                        <img src="/img/about.jpg" alt="">
-                    </div>
-
-                    <div class="header__wall"></div>
-
-                    <div class="header__about-description">
-                        <h2>Привет.</h2>
-                        <p>Я Омурбек, мне 22 года. <br> Увлекаюсь и занимаюсь программированием, а именно  Front-End направлением. Более подробные информации можно получить снизу по ссылкам.</p>
-                    </div>
-
-                </div>
-
-                <div class="header__links">
-                    <a class="header__links-link" href="/pages/main_portfolio.html">Портфолио</a>
-                    <a class="header__links-link process" href="#" onclick="return false">Блог</a>
-                    <a class="header__links-link" href="#">Обо мне</a>
-                </div>
+            <div class="bio">
+                <h1 class="bio__name">Омурбек Арыкбаев</h1>
+                <p class="bio__profession"><i class="fas fa-briefcase"></i> Фронт</p>
+                <p class="bio__location"><i class="fas fa-map-marker-alt"></i> Бишкек, Кыргызстан</p>
+                <ul class="bio__inner-list">
+                    <li class="bio__item">HTML, CSS</li>
+                    <li class="bio__item">JavaScript</li>
+                    <li class="bio__item">React</li>
+                    <li class="bio__item">Redux</li>
+                </ul>
+                <ul class="bio__inner-social-link">
+                    <li class="bio__link">
+                        <a href="https://github.com/OmurbekArykbaev" class="bio__social">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="bio__link">
+                        <a href="https://t.me/twonpix" class="bio__social">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </li>
+                    <li class="bio__link">
+                        <a href="mailto:firefoxer00@gmail.com" class="bio__social">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="bio__link">
+                        <a href="" class="bio__social">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </article>
+        <article class="description">
+            <p class="description__text"> 	&#128512;Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно  Front-End направлением. Более подробные информации можно получить снизу по ссылкам.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate adipisci aliquid ratione cum, veritatis consequatur modi sapiente similique! Voluptas itaque quia nisi quisquam saepe iusto corrupti ab omnis officiis, odio neque obcaecati vero possimus sint commodi amet laborum expedita vel vitae voluptatum? Error at omnis, corporis perferendis eveniet assumenda facere!
+            </p>
+        </article>
+
+        <div class="footer">
+           <p><a href="https://github.com/OmurbekArykbaev/oarykbaev" class="footer__link"><i class="fab fa-github"> </i>  &lt;code /&gt;</a></p>
+            <p class="footer__info">&copy; 2021</p>
         </div>
     </header>
 
-    <script src="/js/humburger.js"></script>
     <script src="https://kit.fontawesome.com/2bd1cd0f0f.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,154 @@
+@import "./works";
+@import "./mobile";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Philosopher", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem;
+  max-width: 1260px;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow-y: hidden;
+  box-shadow: 0 0 8px 5px rgba($color: #000000, $alpha: 0.1);
+
+  .nav {
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+
+    &__inner {
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 2rem;
+    }
+
+    &__link {
+      font-size: 14px;
+      font-weight: 300;
+      color: #000;
+      text-decoration: none;
+    }
+
+    &__link-active {
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+    }
+
+    &__link-logo {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 500;
+      margin-right: 2.5rem;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+
+  .avatar {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 256px;
+
+    &__name {
+      //todo => поменять шрифт на более презентабельный
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    &__profession {
+      font-size: 18px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    &__location {
+      font-size: 18px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    &__inner-list {
+      display: flex;
+    }
+
+    &__item {
+      background-color: #e5e7eb;
+      border-radius: 3px;
+      font-size: 12px;
+      list-style-type: none;
+      margin-right: 6px;
+      padding: 0.3rem;
+    }
+
+    &__inner-social-link {
+      display: flex;
+    }
+
+    &__link {
+      font-size: 24px;
+      margin-right: 1rem;
+      list-style-type: none;
+    }
+    &__social {
+      color: #000;
+    }
+  }
+}
+
+.description {
+  width: 100%;
+
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+}
+
+.footer {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 100;
+  }
+}
