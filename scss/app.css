@@ -160,7 +160,6 @@
 
 @media (max-width: 768px) {
   .main-content {
-    background-color: red;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -176,7 +175,6 @@
 
 @media (max-width: 470px) {
   .main-content {
-    background-color: blue;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
