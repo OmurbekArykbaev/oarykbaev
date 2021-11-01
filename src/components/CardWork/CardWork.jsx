@@ -1,0 +1,44 @@
+import React from "react"
+import { Fragment } from "react"
+import CardTools from "./CardTools"
+import { cardWork } from "../state/stateApp"
+
+const CardWork = () => {
+  return cardWork.map((item) => (
+    <div key={item.id} className="works__card">
+      <div className="works__image"></div>
+
+      <div className="works__container">
+        <h3 className="works__title">{item.title}</h3>
+        <p className="works__date">
+          <i className="fas fa-calendar"></i> {item.date}
+        </p>
+
+        <p className="works__desc">{item.description}</p>
+
+        <ul className="works__inner-items">
+          <CardTools tools={item.tools} toolsId={item.id} />
+        </ul>
+
+        <div className="works__links">
+          {item.demoBtn ? (
+            <a className="works__link" href="">
+              <i className="fas fa-play"></i> Demo
+            </a>
+          ) : (
+            <></>
+          )}
+          {item.srcCode ? (
+            <a className="works__link" href="">
+              <i className="fab fa-github"></i> Source Code
+            </a>
+          ) : (
+            <></>
+          )}
+        </div>
+      </div>
+    </div>
+  ))
+}
+
+export default CardWork
