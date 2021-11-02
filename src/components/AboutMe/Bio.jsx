@@ -5,7 +5,7 @@ const Bio = () => {
     <>
       <h1 className="bio__name">Омурбек Арыкбаев</h1>
       <p className="bio__profession">
-        <i className="fas fa-briefcase"></i> Фронт
+        <i className="fas fa-briefcase"></i> Front-End Developer. JavaScript
       </p>
       <p className="bio__location">
         <i className="fas fa-map-marker-alt"></i> Бишкек, Кыргызстан
