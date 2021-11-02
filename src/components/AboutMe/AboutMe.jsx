@@ -1,6 +1,5 @@
 import React from "react"
 import Bio from "./Bio"
-import SkilsItem from "./SkilsItem"
 import SocialLink from "./SocialLink"
 import { skills, SocialLinks } from "../state/stateApp"
 
@@ -17,7 +16,9 @@ const AboutMe = () => {
         <Bio />
         <ul className="bio__inner-list">
           {skills.map((item, index) => (
-            <SkilsItem key={`${index}_${item}`} skill={item} />
+            <li className="bio__item" key={`${index}_${item}`}>
+              {item}
+            </li>
           ))}
         </ul>
         <ul className="bio__inner-social-link">

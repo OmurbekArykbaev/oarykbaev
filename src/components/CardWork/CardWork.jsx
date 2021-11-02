@@ -1,12 +1,11 @@
 import React from "react"
-import { Fragment } from "react"
 import CardTools from "./CardTools"
 import { cardWork } from "../state/stateApp"
 
 const CardWork = () => {
   return cardWork.map((item) => (
     <div key={item.id} className="works__card">
-      <div className="works__image"></div>
+      <div className="works__image" style={item.image}></div>
 
       <div className="works__container">
         <h3 className="works__title">{item.title}</h3>
@@ -21,15 +20,15 @@ const CardWork = () => {
         </ul>
 
         <div className="works__links">
-          {item.demoBtn ? (
-            <a className="works__link" href="">
+          {item.demoBtn.visible ? (
+            <a className="works__link" href={item.demoBtn.href}>
               <i className="fas fa-play"></i> Demo
             </a>
           ) : (
             <></>
           )}
-          {item.srcCode ? (
-            <a className="works__link" href="">
+          {item.srcCode.visible ? (
+            <a className="works__link" href={item.srcCode.href}>
               <i className="fab fa-github"></i> Source Code
             </a>
           ) : (

@@ -1,13 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Switch, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch } from "react-router-dom"
 import Works from "./pages/Works"
 import { Route } from "react-router"
 import App from "./App"
 
-import "./index.css"
 import "./scss/reset.css"
-import "./scss/app.css"
+import "./scss/app.scss"
 
 ReactDOM.render(
   <React.StrictMode>
