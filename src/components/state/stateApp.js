@@ -1,5 +1,5 @@
 export const description = [
-  "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. Более подробные информации можно получить снизу по ссылкам. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate adipisci aliquid ratione cum, veritatis consequatur modi sapiente similique! Voluptas itaque quia nisi quisquam saepe iusto corrupti ab omnis officiis, odio neque obcaecati vero possimus sint commodi amet laborum expedita vel vitae voluptatum? Error at omnis, corporis perferendis eveniet assumenda facere!",
+  "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. Первое знакомство с информационными технологиями было еще в 2013 году. Далее в 2016 году поступил в Технический Университет им И.Раззакова на программиста/системного аналитика, и по сей день занимаюсь этим делом.",
 ]
 
 export const skills = ["JavaScript ES6", "HTML-CSS", "React", "Redux"]
@@ -26,48 +26,48 @@ export const SocialLinks = [
 export const pathLinks = [
   { id: 1, path: "/", class: "nav__link-logo", title: "ARYKBAEV" },
   { id: 2, path: "/", class: "nav__link", title: "Обо мне" },
-  { id: 3, path: "/works", class: "nav__link", title: "Работы" },
+  { id: 3, path: "/projects", class: "nav__link", title: "Работы" },
 ]
 
 export const cardWork = [
   {
     id: 1,
     image: {
-      backgroundImage: `url(https://images.unsplash.com/photo-1635536999140-1e8dd7c575ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=876&q=80)`,
+      backgroundImage: `url(../../img/2-website.jpg)`,
     },
-    title: "Landing Page",
-    date: "Октябрь 2021",
+    title: "NewsGrid, Landing Page",
+    date: "Август 2021",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias accusantium pariatur aperiam officia iste cupiditate reprehenderit recusandae earum reiciendis. Sunt officia architecto error ducimus est odit eum ullam, natus nemo?",
-    tools: ["HTML", " CSS"],
+      "Презентационный одностраничный сайт, на ванильном HTML,CSS с позиционнирован на Grid. Дизайн и макет был предоставлен на образовательной платформе Udemy",
+    tools: ["HTML", " CSS", "Grid"],
 
     demoBtn: {
       visible: true,
-      href: "https://ru.reactjs.org/docs/getting-started.html",
+      href: "https://flamboyant-easley-1da46e.netlify.app/",
     },
     srcCode: {
       visible: true,
-      href: "https://github.com/OmurbekArykbaev",
+      href: "https://github.com/OmurbekArykbaev/newsgrid",
     },
   },
   {
     id: 2,
     image: {
-      backgroundImage: `url(https://images.unsplash.com/photo-1635536999140-1e8dd7c575ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=876&q=80)`,
+      backgroundImage: `url(../../img/1-website.jpg)`,
     },
-    title: "store",
-    date: "Март 2021",
+    title: "Simple Portfolio, Vanila HTML,CSS",
+    date: "Сентябрь 2021",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias accusantium pariatur aperiam officia iste cupiditate reprehenderit recusandae earum reiciendis. Sunt officia architecto error ducimus est odit eum ullam, natus nemo?",
-    tools: ["HTML", " CSS", "React"],
+      "Один из первых простых сайтов написанный мной, с использованием чистого HTML-CSS без дополнительных библиотек. Проходя курс на Udemy было задание написать свой сайт. Дизайн и макет сайта также был предоставлен платформой.",
+    tools: ["HTML", " CSS", "FlexBox"],
 
     demoBtn: {
-      visible: false,
-      href: "https://ru.reactjs.org/docs/getting-started.html",
+      visible: true,
+      href: "https://portfolio-website-udemy.netlify.app/",
     },
     srcCode: {
       visible: true,
-      href: "https://github.com/OmurbekArykbaev",
+      href: "https://github.com/OmurbekArykbaev/website-portfolio",
     },
   },
 ]

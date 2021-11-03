@@ -1,5 +1,5 @@
 import React from "react"
-import MainFooter from "../components/MainFooter"
+import MainFooter from "../components/Footer/MainFooter"
 import Navbar from "../components/Navbar/Navbar"
 import MainPage from "../components/CardWork/MainPage"
 

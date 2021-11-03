@@ -101,6 +101,79 @@
   }
 }
 
+@media (max-width: 400px) {
+  .works {
+    &__card {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 15px;
+      width: 320px;
+      height: 490px;
+      border-radius: 4px;
+      box-shadow: 0 0 5px 3px rgba($color: #000000, $alpha: 0.1);
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    &__date {
+      font-size: 12px;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 6px;
+
+      i {
+        color: #000;
+        opacity: 0.9;
+      }
+    }
+
+    &__desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18px;
+      opacity: 0.8;
+    }
+
+    &__inner-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &__item {
+      background-color: #e5e7eb;
+      border-radius: 3px;
+      font-size: 11px;
+      list-style-type: none;
+      margin-right: 4px;
+      padding: 0.3rem;
+    }
+
+    &__links {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      flex-direction: column;
+    }
+
+    &__link {
+      font-size: 14px;
+      color: #000;
+      text-decoration: none;
+      text-align: center;
+      padding: 8px 0;
+      margin-bottom: 8px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+      border-radius: 4px;
+      transition: all 0.5s;
+    }
+  }
+}
+
 @media (max-width: 340px) {
   header {
     .main-content {
