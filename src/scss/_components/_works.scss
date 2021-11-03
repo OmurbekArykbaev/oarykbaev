@@ -75,6 +75,7 @@
     font-size: 13px;
     font-weight: 300;
     opacity: 0.9;
+    margin-bottom: 10px;
 
     i {
       color: #000;
@@ -94,6 +95,7 @@
   &__inner-items {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 10px;
   }
 
   &__item {
