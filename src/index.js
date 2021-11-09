@@ -10,7 +10,7 @@ import "./scss/app.scss"
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename="/">
+    <HashRouter>
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/projects" exact component={Works} />
