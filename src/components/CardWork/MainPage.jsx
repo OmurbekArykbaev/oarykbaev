@@ -1,6 +1,6 @@
 import React from "react"
 import CardWork from "./CardWork"
-import { cardWork } from "../state/stateApp"
+import { cardWork } from "../../Assets/database"
 
 const MainPage = () => {
   return (

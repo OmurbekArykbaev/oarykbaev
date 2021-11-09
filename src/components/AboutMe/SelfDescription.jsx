@@ -1,5 +1,5 @@
 import React from "react"
-import { description } from "../state/stateApp"
+import { description } from "../../Assets/database"
 
 const SelfDescription = () => {
   return (

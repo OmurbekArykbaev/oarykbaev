@@ -1,5 +1,5 @@
 export const description = [
-  "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. Первое знакомство с информационными технологиями было еще в 2013 году. Далее в 2016 году поступил в Технический Университет им И.Раззакова на программиста/системного аналитика, и по сей день занимаюсь этим делом.",
+  "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. В 2020 окончил Технический Университет им И.Раззакова по специальности системный аналитик-программист. ",
 ]
 
 export const skills = ["JavaScript ES6", "HTML-CSS", "React", "Redux"]
@@ -33,7 +33,7 @@ export const cardWork = [
   {
     id: 1,
     image: {
-      backgroundImage: `url(../../img/2-website.jpg)`,
+      backgroundImage: `url(src/Assets/img/1-website.JPG)`,
     },
     title: "NewsGrid, Landing Page",
     date: "Август 2021",
@@ -53,7 +53,7 @@ export const cardWork = [
   {
     id: 2,
     image: {
-      backgroundImage: `url(../../img/1-website.jpg)`,
+      backgroundImage: "url(src/Assets/img/2-website.JPG)",
     },
     title: "Simple Portfolio, Vanila HTML,CSS",
     date: "Сентябрь 2021",

@@ -1,6 +1,6 @@
 import React from "react"
 import CardTools from "./CardTools"
-import { cardWork } from "../state/stateApp"
+import { cardWork } from "../../Assets/database"
 
 const CardWork = () => {
   return cardWork.map((item) => (

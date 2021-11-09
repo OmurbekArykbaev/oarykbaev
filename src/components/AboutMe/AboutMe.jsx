@@ -1,7 +1,7 @@
 import React from "react"
 import Bio from "./Bio"
 import SocialLink from "./SocialLink"
-import { skills, SocialLinks } from "../state/stateApp"
+import { skills, SocialLinks } from "../../Assets/database"
 
 const AboutMe = () => {
   return (
