@@ -4,10 +4,6 @@ import { pathLinks } from "../../Assets/database"
 import { useHistory } from "react-router"
 
 const Navbar = () => {
-  const histoty = useHistory()
-  const handleHistory = () => {
-    histoty.push("/works1")
-  }
   return (
     <nav className="nav">
       <ul className="nav__inner">
@@ -22,11 +18,7 @@ const Navbar = () => {
             </div>
           ) : (
             <li className="nav__item" key={link.id}>
-              <Link
-                onClick={handleHistory}
-                to={link.path}
-                className={link.class}
-              >
+              <Link to={link.path} className={link.class}>
                 {link.title}
               </Link>
             </li>
