@@ -10,7 +10,7 @@ import "./scss/app.scss"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router forceRefresh={true}>
+    <Router forceRefresh={false}>
       <Switch>
         <Route path="/" exact component={App} />
         <Route path="/projects" exact component={Works} />
