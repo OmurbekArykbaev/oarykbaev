@@ -12,8 +12,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Router forceRefresh={false}>
       <Switch>
-        <Route path="/" exact component={App} />
-        <Route path="/projects" exact component={Works} />
+        <Route path="/" component={App} />
+        <Route path="/projects" component={Works} />
       </Switch>
     </Router>
   </React.StrictMode>,
