@@ -43,22 +43,25 @@
     width: 100%;
     height: 100%;
   }
-
-  &__image {
-    background-image: url("https://images.unsplash.com/photo-1633113089631-6456cccaadad?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    width: 100%;
+  &__img-block {
+    width: 320px;
     height: 200px;
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 7px 7px 0 0;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    position: relative;
+
     border-bottom: 0.5px solid #000;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    transition: opacity 500ms ease 0s;
 
     &:hover {
-      background-size: 105%;
+      opacity: 0.7;
     }
   }
 
