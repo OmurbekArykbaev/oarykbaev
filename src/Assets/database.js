@@ -1,5 +1,5 @@
-import imgFlex from "../Assets/img/1-website.jpg"
-import imgGrid from "../Assets/img/2-website.jpg"
+// import imgFlex from "../Assets/img/1-website.jpg"
+// import imgGrid from "../Assets/img/2-website.jpg"
 
 export const description = [
   "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. В 2020 окончил Технический Университет им И.Раззакова по специальности системный аналитик-программист. ",
@@ -35,7 +35,10 @@ export const pathLinks = [
 export const cardWork = [
   {
     id: 1,
-    image: imgGrid,
+    image: {
+      backgroundImage:
+        "url(https://images.unsplash.com/photo-1633114073804-1ea0fac57af0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)",
+    },
     title: "NewsGrid, Landing Page",
     date: "Август 2021",
     description:
@@ -53,7 +56,10 @@ export const cardWork = [
   },
   {
     id: 2,
-    image: imgFlex,
+    image: {
+      backgroundImage:
+        "url(https://images.unsplash.com/photo-1636420401372-a11d0391dfe4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)",
+    },
     title: "Simple Portfolio, Vanila HTML,CSS",
     date: "Сентябрь 2021",
     description:

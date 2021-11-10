@@ -6,9 +6,7 @@ import { cardWork } from "../../Assets/database"
 const CardWork = () => {
   return cardWork.map((item) => (
     <div key={item.id} className="works__card">
-      <div className="works__img-block">
-        <img className="works__image" src={item.image} alt="" />
-      </div>
+      <div className="works__image" style={item.image}></div>
 
       <div className="works__container">
         <div>
