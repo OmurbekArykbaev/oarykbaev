@@ -1,7 +1,6 @@
 import React from "react"
 import CardTools from "./CardTools"
 import { cardWork } from "../../Assets/database"
-// import img from "../../Assets/img/2-website.jpg"
 
 const CardWork = () => {
   return cardWork.map((item) => (
