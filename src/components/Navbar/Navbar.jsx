@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { pathLinks } from "../../Assets/database"
-import { useHistory } from "react-router"
 
 const Navbar = () => {
   return (

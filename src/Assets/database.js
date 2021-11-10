@@ -1,5 +1,5 @@
-import imgFlex from "./img/1-website.jpg"
-import imgGrid from "./img/2-website.jpg"
+import imgFlex from "../Assets/img/1-website.jpg"
+import imgGrid from "../Assets/img/2-website.jpg"
 
 export const description = [
   "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. В 2020 окончил Технический Университет им И.Раззакова по специальности системный аналитик-программист. ",

@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Switch, HashRouter } from "react-router-dom"
+import { BrowserRouter as Router, Switch } from "react-router-dom"
 import Works from "./pages/Works"
 import { Route } from "react-router"
 import App from "./App"
