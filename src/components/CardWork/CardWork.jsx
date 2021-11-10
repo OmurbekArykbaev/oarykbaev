@@ -7,7 +7,7 @@ const CardWork = () => {
   return cardWork.map((item) => (
     <div key={item.id} className="works__card">
       <div className="works__img-block">
-        <img className="works__image" src={item.image} alt="" />
+        <img className="works__image" src={img} alt="" />
       </div>
 
       <div className="works__container">
