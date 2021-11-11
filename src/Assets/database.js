@@ -2,7 +2,15 @@ export const description = [
   "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. В 2020 окончил Технический Университет им И.Раззакова по специальности системный аналитик-программист. ",
 ]
 
-export const skills = ["JavaScript ES6", "HTML-CSS", "React", "Redux"]
+export const skills = [
+  "JavaScript",
+  "React",
+  "Redux",
+  "Sass-Scss",
+  "Bootstrap 4+",
+  "GIT-GitHub",
+  "Docker",
+]
 
 export const SocialLinks = [
   {
@@ -50,6 +58,7 @@ export const cardWork = [
       href: "https://github.com/OmurbekArykbaev/newsgrid",
     },
   },
+
   {
     id: 2,
     image: {
@@ -68,6 +77,27 @@ export const cardWork = [
     srcCode: {
       visible: true,
       href: "https://github.com/OmurbekArykbaev/website-portfolio",
+    },
+  },
+
+  {
+    id: 3,
+    image: {
+      backgroundImage: "url(/img/3-website.jpg)",
+    },
+    title: "Mini projects in HTML, CSS & JavaScript that relate to the DOM",
+    date: "Август 2021",
+    description:
+      "Несколько маленьких работ написаные на JavaScript при участии DOM (Document Object Model). Стилизованно в ванильном html, css.",
+    tools: ["HTML", " CSS", "JavaScript ES6", "DOM", "JSON-API", "Async/Await"],
+
+    demoBtn: {
+      visible: true,
+      href: "https://jsdom-mini-projects.netlify.app/",
+    },
+    srcCode: {
+      visible: true,
+      href: "https://github.com/OmurbekArykbaev/vanilaDom-50-mini-projects",
     },
   },
 ]

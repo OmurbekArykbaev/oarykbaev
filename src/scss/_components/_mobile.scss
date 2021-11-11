@@ -1,4 +1,11 @@
 @media (max-width: 768px) {
+  .works__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
   .main-content {
     display: flex;
     margin-bottom: 3rem;
@@ -56,6 +63,7 @@
         text-decoration: none;
       }
     }
+
     .main-content {
       display: flex;
       flex-direction: column;
@@ -74,6 +82,23 @@
         justify-content: space-around;
         width: 400px;
         height: 200px;
+
+        &__inner-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 8px;
+        }
+
+        &__item {
+          background-color: #e5e7eb;
+          border-radius: 3px;
+          font-size: 13px;
+          list-style-type: none;
+          margin: 3px;
+          padding: 0.3rem;
+        }
 
         &__name {
           //todo => поменять шрифт на более презентабельный
@@ -106,7 +131,7 @@
     &__card {
       display: flex;
       flex-direction: column;
-      margin: 10px 15px;
+      margin: 30px 15px;
       width: 320px;
       height: 490px;
       border-radius: 4px;

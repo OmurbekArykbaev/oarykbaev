@@ -102,6 +102,9 @@ body {
 
     &__inner-list {
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 5px 0;
     }
 
     &__item {
@@ -109,7 +112,7 @@ body {
       border-radius: 3px;
       font-size: 12px;
       list-style-type: none;
-      margin-right: 6px;
+      margin: 6px;
       padding: 0.3rem;
     }
 
