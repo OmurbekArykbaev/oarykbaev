@@ -100,4 +100,24 @@ export const cardWork = [
       href: "https://github.com/OmurbekArykbaev/vanilaDom-50-mini-projects",
     },
   },
+  {
+    id: 4,
+    image: {
+      backgroundImage: "url(/img/4-website.jpg)",
+    },
+    title: "Todo List built on React-Redux",
+    date: "Ноябрь 2021",
+    description:
+      "Я прекрасно понимаю что Менеджер состояний Redux для простого Туду листа будет трудозатратно и бессмысленно, но в качестве моей практики оно было необходимо.",
+    tools: ["React", "Redux", "SCSS"],
+
+    demoBtn: {
+      visible: true,
+      href: "https://todomodernapp.netlify.app/",
+    },
+    srcCode: {
+      visible: true,
+      href: "https://github.com/OmurbekArykbaev/todoModern-react-redux",
+    },
+  },
 ]
