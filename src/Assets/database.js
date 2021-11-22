@@ -26,7 +26,7 @@ export const SocialLinks = [
     fontAwesome: "fas fa-envelope",
   },
   {
-    href: "https://www.linkedin.com/in/%D0%BE%D0%BC%D1%83%D1%80%D0%B1%D0%B5%D0%BA-%D0%B0%D1%80%D1%8B%D0%BA%D0%B1%D0%B0%D0%B5%D0%B2-34ab56211/",
+    href: "https://www.linkedin.com/in/oarykbaev/",
     fontAwesome: "fab fa-linkedin",
   },
 ]
