@@ -1,12 +1,14 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { pathLinks } from "../../Assets/database"
+
+import "./Navbar.scss"
 
 const Navbar = () => {
   return (
     <nav className="nav">
       <ul className="nav__inner">
-        {pathLinks.map((link) =>
+        <li className="nav__item">Arykbaev</li>
+        <li className="nav__item">Главное</li>
+        {/* {pathLinks.map((link) =>
           link.title === "ARYKBAEV" ? (
             <div key={link.id}>
               <li className="nav__item">
@@ -22,7 +24,7 @@ const Navbar = () => {
               </Link>
             </li>
           )
-        )}
+        )} */}
       </ul>
     </nav>
   )

@@ -1,0 +1,36 @@
+.nav {
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 2rem;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__link-active {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+  }
+
+  &__link-logo {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 0rem;
+    color: #000;
+    text-decoration: none;
+  }
+}

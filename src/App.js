@@ -1,16 +1,15 @@
-import AboutMe from "./components/AboutMe/AboutMe"
-import MainFooter from "./components/Footer/MainFooter"
-import Navbar from "./components/Navbar/Navbar"
-import SelfDescription from "./components/AboutMe/SelfDescription"
+import MainPage from "./pages/MainPage/MainPage"
+import WorkPage from "./pages/WorkPage/WorkPage"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
 function App() {
   return (
-    <header className="header">
-      <Navbar />
-      <AboutMe />
-      <SelfDescription />
-      <MainFooter />
-    </header>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/projects" element={<WorkPage />} />
+      </Routes>
+    </Router>
   )
 }
 
