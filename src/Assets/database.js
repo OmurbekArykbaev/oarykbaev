@@ -40,9 +40,7 @@ export const pathLinks = [
 export const cardWork = [
   {
     id: 1,
-    image: {
-      backgroundImage: "url(/img/2-website.jpg)",
-    },
+    image: "/img/2-website.jpg",
     title: "NewsGrid, Landing Page",
     date: "Август 2021",
     description:
@@ -61,9 +59,8 @@ export const cardWork = [
 
   {
     id: 2,
-    image: {
-      backgroundImage: "url(/img/1-website.jpg)",
-    },
+    image: "/img/1-website.jpg",
+
     title: "Simple Portfolio, Vanila HTML,CSS",
     date: "Сентябрь 2021",
     description:
@@ -82,10 +79,8 @@ export const cardWork = [
 
   {
     id: 3,
-    image: {
-      backgroundImage: "url(/img/3-website.jpg)",
-    },
-    title: "Mini projects in HTML, CSS & JavaScript that relate to the DOM",
+    image: "/img/3-website.jpg",
+    title: "45 mini projects, DOM JS",
     date: "Август 2021",
     description:
       "Несколько маленьких работ написаные на JavaScript при участии DOM (Document Object Model). Стилизованно в ванильном html, css.",
@@ -102,9 +97,7 @@ export const cardWork = [
   },
   {
     id: 4,
-    image: {
-      backgroundImage: "url(/img/4-website.jpg)",
-    },
+    image: "/img/4-website.jpg",
     title: "Todo List built on React-Redux",
     date: "Ноябрь 2021",
     description:
@@ -118,6 +111,50 @@ export const cardWork = [
     srcCode: {
       visible: true,
       href: "https://github.com/OmurbekArykbaev/todoModern-react-redux",
+    },
+  },
+  {
+    id: 5,
+    image: "/img/5-website.jpg",
+    title: "FullStack, E-Commerce Shop (MERN)",
+    date: "Декабрь 2021",
+    description:
+      "Магазин электронных устройств, на подобий Amazon. Имеются возможности: просмотреть товар, положить в корзину, оформить и заказать. Регистрация либо вход в систему. Добавлено пагинация страниц, учетная запись для администратора с возможностями добавить/удалить товар, заблокировать пользователя и т.д.",
+    tools: [
+      "React",
+      "Redux",
+      "Bootstrap 4",
+      "MongoDB, Mongoose",
+      "NodeJs",
+      "Express",
+    ],
+
+    demoBtn: {
+      visible: true,
+      href: "https://proshop-oarykbaev.herokuapp.com/",
+    },
+    srcCode: {
+      visible: true,
+      href: "https://github.com/OmurbekArykbaev/mern-proshop",
+    },
+  },
+
+  {
+    id: 6,
+    image: "/img/6-website.jpg",
+    title: "CV-Portfolio",
+    date: "Январь 2022",
+    description:
+      "Сайт портфолио для предоставлений сведений о себе, выступает в роле электронного резюме. Краткая информация о моих пет-проектах и о моих навыках.",
+    tools: ["React", "Scss", "React-Router"],
+
+    demoBtn: {
+      visible: true,
+      href: "https://oarykbaev.netlify.app/",
+    },
+    srcCode: {
+      visible: true,
+      href: "https://github.com/OmurbekArykbaev/oarykbaev",
     },
   },
 ]

@@ -1,15 +1,19 @@
 import React from "react"
-import MainFooter from "../../components/Footer/MainFooter"
 import Navbar from "../../components/Navbar/Navbar"
-import MainPage from "../../components/CardWork/MainPage"
+import { cardWork } from "../../Assets/database"
+import ProjectCard from "../../components/ProjectCard/ProjectCard"
+import "./WorkPage.scss"
 
 const Works = () => {
   return (
-    <header className="header">
+    <section className="workpage">
       <Navbar />
-      <MainPage />
-      <MainFooter />
-    </header>
+      <div className="workpage__inner">
+        {cardWork.map((proj) => (
+          <ProjectCard key={proj.id} project={proj} />
+        ))}
+      </div>
+    </section>
   )
 }
 
