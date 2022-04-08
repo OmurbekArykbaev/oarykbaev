@@ -1,26 +1,44 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
-import "./Navbar.scss"
+import { Container } from "../index"
+import {
+  Nav,
+  Wrapper,
+  Logo,
+  Check,
+  CheckBtn,
+  Items,
+  Item,
+  LinkBtn,
+} from "./NavbarStyled.js"
 
 const Navbar = () => {
   return (
-    <nav className="nav">
-      <ul className="nav__inner">
-        <li className="nav__item">
-          <Link to="/">Главное</Link>
-        </li>
-        <span className="nav__bar">
-          <button>
-            <i className="fas fa-bars"></i>
-          </button>
+    <Nav>
+      <Container>
+        <Wrapper>
+          <Logo to="/">Omurbek</Logo>
+          <Check type="checkbox" id="check" />
+          <CheckBtn htmlFor="check">
+            <i className="fa-solid fa-bars"></i>
+          </CheckBtn>{" "}
+          <Items>
+            <Item>
+              <LinkBtn to="/projects">Projects</LinkBtn>
+            </Item>
 
-          <Link to="/">
-            <i className="fas fa-bars"></i>
-          </Link>
-        </span>
-      </ul>
-    </nav>
+            <Item>
+              <LinkBtn to="/">Blog</LinkBtn>
+            </Item>
+            <Item>
+              <LinkBtn to="/">CV</LinkBtn>
+            </Item>
+            <Item>
+              <LinkBtn to="/">Contacts</LinkBtn>
+            </Item>
+          </Items>
+        </Wrapper>
+      </Container>
+    </Nav>
   )
 }
 

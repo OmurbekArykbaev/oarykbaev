@@ -1,48 +1,17 @@
 import React from "react"
-import "./ProjectCard.scss"
+import { Card, Image, Title, Description } from "./ProjectCardStyled"
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = () => {
   return (
-    <article className="card">
-      <div className="card__inner">
-        <div className="card__about">
-          <img src={project.image} alt={project.title} />
-          <h2>{project.title}</h2>
-        </div>
-
-        <div className="card__description">
-          <p>{project.description}</p>
-
-          <div className="date-tools">
-            <ul>
-              {project.tools.map((item, idx) => (
-                <li key={`${idx}_${item}`}>{item}</li>
-              ))}
-            </ul>
-            <h6>
-              <i className="far fa-calendar-alt"></i> {project.date}
-            </h6>
-          </div>
-        </div>
-
-        <div className="card__source">
-          {project.demoBtn.visible ? (
-            <a href={project.demoBtn.href} className="card__link">
-              Demo
-            </a>
-          ) : (
-            <></>
-          )}
-          {project.srcCode.visible ? (
-            <a href={project.srcCode.href} className="card__link">
-              Source
-            </a>
-          ) : (
-            <></>
-          )}
-        </div>
-      </div>
-    </article>
+    <Card to="/">
+      <Image src="/img/card-img.jpg" alt="" />
+      <Title>Mirro Preset Pack Vol. 01</Title>
+      <Description>
+        The first volume is my go-to presets when shooting action sports. Just
+        the right amount of contrast and highlights to make your photo
+        (literally) pop!
+      </Description>
+    </Card>
   )
 }
 
