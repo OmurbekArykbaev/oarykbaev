@@ -16,26 +16,28 @@ import {
   LinkItem,
   Link,
   ButtonBack,
-  LoadingSpin,
-  Loading,
 } from "./DetailsPageStyled"
+import { LoadingSpin, Loading } from "../../components/Loading/Loading"
 import axios from "axios"
 import { Container } from "../../components"
 import { useParams, useNavigate } from "react-router-dom"
 
 const DetailsPage = () => {
   const [projectDetail, setProjectDetail] = useState({})
+  const [stackArray, setStackArray] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
   const { id } = useParams()
 
   useEffect(() => {
+    axios.put(`https://omur-api.herokuapp.com/api/visit/project/${id}`)
     axios
       .get("https://omur-api.herokuapp.com/api/projects")
       .then(({ data }) => {
         setProjectDetail(...data.filter((p) => p._id === id))
         setIsLoading(false)
       })
+    setStackArray(projectDetail.stack)
   }, [id])
 
   return (
@@ -72,26 +74,42 @@ const DetailsPage = () => {
                 <About>
                   <Items>
                     <Item>
-                      <Bold>Name</Bold>
-                      <Span>: {projectDetail.name}</Span>
+                      <Bold>Name:</Bold>
+                      <Span>&nbsp;{projectDetail.name}</Span>
                     </Item>
                     <Item>
-                      <Bold>Project Type</Bold>
-                      <Span>: {projectDetail.projectType}</Span>
+                      <Bold>Project Type:</Bold>
+                      <Span>&nbsp;{projectDetail.projectType}</Span>
                     </Item>
                     <Item>
-                      <Bold>Paas</Bold>
-                      <Span>: {projectDetail.paas}</Span>
+                      <Bold>Paas:</Bold>
+                      <Span>&nbsp;{projectDetail.paas}</Span>
+                    </Item>
+                    {projectDetail.date ? (
+                      <Item>
+                        <Bold>Date:</Bold>
+
+                        <Span>&nbsp;{projectDetail.date}</Span>
+                      </Item>
+                    ) : (
+                      <Item>
+                        <Bold>Date:</Bold>
+
+                        <Span>&nbsp;2022</Span>
+                      </Item>
+                    )}
+                    <Item>
+                      <Bold>Stack:</Bold>
+                      <Span>
+                        &nbsp;{projectDetail.stack.map((s) => s + ", ")}
+                      </Span>
                     </Item>
                     <Item>
-                      <Bold>Date</Bold>
-                      <Span>: </Span>
-                    </Item>
-                    <Item>
-                      <Bold>Stack</Bold>
-                      <Span>: {projectDetail.stack}</Span>
+                      <Bold>Views:</Bold>
+                      <Span>&nbsp;{projectDetail.views}</Span>
                     </Item>
                   </Items>
+
                   <Summury>
                     <Title>Description</Title>
                     <Description>{projectDetail.description}</Description>

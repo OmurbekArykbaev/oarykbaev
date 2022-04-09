@@ -22,10 +22,9 @@ const PetProjectCard = ({
   name,
   stack,
   description,
-  demo,
   sourceCode,
-  date,
   id,
+  views,
 }) => {
   return (
     <Card>
@@ -42,11 +41,15 @@ const PetProjectCard = ({
         </About>
         <DateViews>
           <Date>
-            <i className="fas fa-calendar-alt"></i> {date.slice(0, 7)}
+            {/* <i className="fas fa-calendar-alt"></i> {date.slice(0, 7)} */}
           </Date>
-          <Views>
-            <i className="fa-solid fa-eye"></i> 0
-          </Views>
+          {views ? (
+            <Views>
+              <i className="fa-solid fa-eye">{views}</i>
+            </Views>
+          ) : (
+            <></>
+          )}
         </DateViews>
       </Title>
 
@@ -60,9 +63,9 @@ const PetProjectCard = ({
         <NavLink to={sourceCode}>
           <i className="fa-brands fa-github"></i>
         </NavLink>
-        <NavLink to="#">
-          <i className="fa-solid fa-share-nodes"></i>
-        </NavLink>
+        <a>
+          <i className="fa-solid fa-play"></i>
+        </a>
       </CardAction>
     </Card>
   )

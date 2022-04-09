@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { ProjectCard, Container } from "../index"
+import axios from "axios"
 import {
   ProjectSection,
   Wrapper,
@@ -11,8 +12,22 @@ import {
   LinkBtn,
   RectPink,
 } from "./ProjectsStyled"
+import { Loading, LoadingSpin } from "../Loading/Loading"
 
 const ProjectsSection = () => {
+  const [projects, setProjects] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    axios
+      .get("https://omur-api.herokuapp.com/api/projects")
+      .then(({ data }) => {
+        setIsLoading(false)
+        data.length > 3
+          ? setProjects(data.slice(0, 3))
+          : setProjects(data.slice(0, data.length))
+      })
+  }, [])
   return (
     <ProjectSection>
       <Container>
@@ -28,12 +43,20 @@ const ProjectsSection = () => {
           </Title>
 
           <Features>
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {isLoading ? (
+              <Loading>
+                <LoadingSpin />
+              </Loading>
+            ) : (
+              <>
+                {projects.map((p) => (
+                  <ProjectCard key={p._id} project={p} />
+                ))}
+              </>
+            )}
           </Features>
-          <LinkBtn to="/">
-            Preset store <i className="fa-solid fa-arrow-right-long"></i>
+          <LinkBtn to="/projects">
+            See more <i className="fa-solid fa-arrow-right-long"></i>
           </LinkBtn>
         </Wrapper>
       </Container>

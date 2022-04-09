@@ -6,7 +6,7 @@ const ProjectSection = styled.section`
 `
 const Wrapper = styled.div`
   padding: 2rem 0;
-  height: calc(100vh - 77px);
+  height: calc(100% - 77px);
   display: grid;
   grid-gap: 1rem;
   justify-items: center;

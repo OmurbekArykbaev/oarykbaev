@@ -47,6 +47,8 @@ const Description = styled.p`
   margin: 6px 0 26px 30px;
 
   @media (max-width: 480px) {
+    text-align: center;
+    margin: 0.5rem 0.5rem;
     font-size: var(--fs-sm);
     line-height: 22px;
   }

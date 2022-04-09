@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 const DetailsSection = styled.section`
   padding: 1rem;
@@ -6,36 +6,6 @@ const DetailsSection = styled.section`
 `
 const Wrapper = styled.div`
   padding: 1rem;
-`
-
-const LoadingAnimation = keyframes`
-  0%  {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
-`
-const Loading = styled.div`
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-const LoadingSpin = styled.div`
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-
-  &:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid var(--primary-color);
-    border-color: var(--primary-color) transparent var(--primary-color)
-      transparent;
-    animation: ${LoadingAnimation} 1.2s linear infinite;
-  }
 `
 
 const ButtonBack = styled.button`
@@ -94,6 +64,7 @@ const About = styled.div`
   }
 `
 const Items = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -107,24 +78,37 @@ const Items = styled.ul`
 `
 const Item = styled.li`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  // align-items: center;
   font-size: 20px;
   line-height: 25px;
   font-weight: var(--fw-normal);
+  padding: 0.1rem 0;
+  flex-wrap: wrap;
 `
-const Bold = styled.b``
-const Span = styled.span``
+const Bold = styled.b`
+  font-family: --family-src;
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+`
+const Span = styled.span`
+  font-family: --family-src;
+`
 const Summury = styled.article`
   width: 50%;
-
+  font-size: 20px;
+  line-height: 25px;
   @media (max-width: 800px) {
     padding-top: 2rem;
     width: 100%;
   }
 `
-const Title = styled.h3``
-const Description = styled.p``
+const Title = styled.h3`
+  font-family: --family-src;
+`
+const Description = styled.p`
+  font-family: --family-src;
+`
 const Links = styled.ul`
   display: flex;
   list-style: none;
@@ -192,6 +176,4 @@ export {
   LinkItem,
   Link,
   ButtonBack,
-  LoadingSpin,
-  Loading,
 }

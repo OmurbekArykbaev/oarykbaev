@@ -33,7 +33,7 @@ const Navbar = () => {
               <LinkBtn to="/">CV</LinkBtn>
             </Item>
             <Item>
-              <LinkBtn to="/">Contacts</LinkBtn>
+              <LinkBtn to="/admin">admin</LinkBtn>
             </Item>
           </Items>
         </Wrapper>

@@ -1,16 +1,12 @@
 import React from "react"
 import { Card, Image, Title, Description } from "./ProjectCardStyled"
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
   return (
-    <Card to="/">
-      <Image src="/img/card-img.jpg" alt="" />
-      <Title>Mirro Preset Pack Vol. 01</Title>
-      <Description>
-        The first volume is my go-to presets when shooting action sports. Just
-        the right amount of contrast and highlights to make your photo
-        (literally) pop!
-      </Description>
+    <Card to={`/projects/details/${project._id}`}>
+      <Image src={project.image[0]} alt="" />
+      <Title> {project.stack.map((s) => s + ", ")}</Title>
+      <Description>{project.description}</Description>
     </Card>
   )
 }

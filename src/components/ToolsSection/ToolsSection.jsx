@@ -12,6 +12,8 @@ import {
   RectGreen,
 } from "./ToolsStyled"
 
+const data = [{ name: "tool", summury: "sadasd" }]
+
 const ToolsSection = () => {
   return (
     <ToolSection>
