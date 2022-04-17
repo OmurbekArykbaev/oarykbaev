@@ -7,16 +7,12 @@ import {
   LinkCard,
 } from "./ToolCardStyled"
 
-const ToolCard = () => {
+const ToolCard = ({ name, summury, img }) => {
   return (
     <Card>
-      <ImageCard src="./img/icon.png" alt="Name" />
-      <TitleCard>Wedding Photography</TitleCard>
-      <DescriptionCard>
-        Wedding photography is often called the bread and butter of
-        photographers — but that doesn't mean it has to be boring. Quite the
-        opposite!
-      </DescriptionCard>
+      <ImageCard src={img} alt="Name" />
+      <TitleCard>{name}</TitleCard>
+      <DescriptionCard>{summury}</DescriptionCard>
       <LinkCard to="/">Read more</LinkCard>
     </Card>
   )

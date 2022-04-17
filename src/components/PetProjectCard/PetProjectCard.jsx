@@ -21,6 +21,7 @@ import {
 const PetProjectCard = ({
   name,
   stack,
+  date,
   description,
   sourceCode,
   id,
@@ -41,7 +42,7 @@ const PetProjectCard = ({
         </About>
         <DateViews>
           <Date>
-            {/* <i className="fas fa-calendar-alt"></i> {date.slice(0, 7)} */}
+            <i className="fas fa-calendar-alt"></i> {date.slice(0, 7)}
           </Date>
           {views ? (
             <Views>
@@ -63,7 +64,7 @@ const PetProjectCard = ({
         <NavLink to={sourceCode}>
           <i className="fa-brands fa-github"></i>
         </NavLink>
-        <a>
+        <a href="/#">
           <i className="fa-solid fa-play"></i>
         </a>
       </CardAction>

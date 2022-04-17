@@ -24,7 +24,7 @@ import { useParams, useNavigate } from "react-router-dom"
 
 const DetailsPage = () => {
   const [projectDetail, setProjectDetail] = useState({})
-  const [stackArray, setStackArray] = useState([])
+
   const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
   const { id } = useParams()
@@ -37,7 +37,6 @@ const DetailsPage = () => {
         setProjectDetail(...data.filter((p) => p._id === id))
         setIsLoading(false)
       })
-    setStackArray(projectDetail.stack)
   }, [id])
 
   return (
@@ -64,8 +63,12 @@ const DetailsPage = () => {
                     </>
                   ) : (
                     <>
-                      {projectDetail.image.map((i) => (
-                        <Image key={i} src={i} alt={projectDetail.name} />
+                      {projectDetail.image.map((img, index) => (
+                        <Image
+                          key={img + index}
+                          src={img}
+                          alt={projectDetail.name}
+                        />
                       ))}
                     </>
                   )}
@@ -85,19 +88,13 @@ const DetailsPage = () => {
                       <Bold>Paas:</Bold>
                       <Span>&nbsp;{projectDetail.paas}</Span>
                     </Item>
-                    {projectDetail.date ? (
-                      <Item>
-                        <Bold>Date:</Bold>
 
-                        <Span>&nbsp;{projectDetail.date}</Span>
-                      </Item>
-                    ) : (
-                      <Item>
-                        <Bold>Date:</Bold>
+                    <Item>
+                      <Bold>Date:</Bold>
 
-                        <Span>&nbsp;2022</Span>
-                      </Item>
-                    )}
+                      <Span>&nbsp;{projectDetail.date.slice(0, 7)}</Span>
+                    </Item>
+
                     <Item>
                       <Bold>Stack:</Bold>
                       <Span>

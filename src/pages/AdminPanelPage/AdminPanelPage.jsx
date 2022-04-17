@@ -3,15 +3,16 @@ import { Container } from "../../components"
 import axios from "axios"
 import {
   Wrapper,
-  Banner,
   ButtonCreate,
   Form,
   InputText,
   TextArea,
   Submit,
 } from "./AdminPanelPageStyled"
+import { useNavigate } from "react-router-dom"
 
 const AdminPanelPage = () => {
+  const navigate = useNavigate()
   const [id, setId] = useState("")
   const [name, setName] = useState("")
   const [image, setImage] = useState("")
@@ -22,7 +23,10 @@ const AdminPanelPage = () => {
   const [projectType, setProjectType] = useState("")
   const [demo, setDemo] = useState("")
   const [sourceCode, setSourceCode] = useState("")
-  const [response, setResponse] = useState("")
+  // const [newError, setNewError] = useState("")
+  const [openForm, setOpenForm] = useState(true)
+  const [openProjectList, setOpenProjectList] = useState(false)
+  const [projects, setProjects] = useState([])
 
   const postRequest = async () => {
     await axios
@@ -56,91 +60,123 @@ const AdminPanelPage = () => {
       views: 0,
     }
 
-    await axios
-      .put(`https://omur-api.herokuapp.com/api/projects/${id}`, project)
-      .then(({ data }) => setResponse(data))
+    await axios.put(
+      `https://omur-api.herokuapp.com/api/projects/${id}`,
+      project
+    )
+
+    navigate("/projects")
   }
 
-  useEffect(() => {}, [])
+  const onRemoveHandler = async (projectid) => {
+    await axios.delete(
+      `https://omur-api.herokuapp.com/api/projects/${projectid}`
+    )
+  }
+
+  useEffect(() => {
+    axios
+      .get("https://omur-api.herokuapp.com/api/projects")
+      .then(({ data }) => {
+        setProjects(data.reverse())
+      })
+  }, [])
   return (
     <section>
       <Container>
         <Wrapper>
-          {response ? (
+          {/* {newError ? (
             <Banner>
-              <p>{response}</p>
+              <p>{newError}</p>
             </Banner>
           ) : (
             <></>
+          )} */}
+          <button onClick={() => setOpenForm(!openForm)}>+</button>
+          {openForm && (
+            <>
+              <ButtonCreate onClick={() => postRequest()}>
+                Create new Projects
+              </ButtonCreate>
+
+              <Form action="put">
+                <InputText
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                  type="text"
+                  placeholder="name"
+                />
+                <InputText
+                  onChange={(e) => setImage(e.target.value)}
+                  value={image}
+                  type="text"
+                  placeholder="image"
+                />
+                <InputText
+                  onChange={(e) => setDate(e.target.value)}
+                  value={date}
+                  type="text"
+                  placeholder="date"
+                />
+
+                <InputText
+                  onChange={(e) => setStack(e.target.value)}
+                  value={stack}
+                  type="text"
+                  placeholder="stack"
+                />
+                <TextArea
+                  onChange={(e) => setDescription(e.target.value)}
+                  value={description}
+                  type="text"
+                  placeholder="description"
+                />
+                <InputText
+                  onChange={(e) => setPaas(e.target.value)}
+                  value={paas}
+                  type="text"
+                  placeholder="paas"
+                />
+                <InputText
+                  onChange={(e) => setProjectType(e.target.value)}
+                  value={projectType}
+                  type="text"
+                  placeholder="type"
+                />
+                <InputText
+                  onChange={(e) => setSourceCode(e.target.value)}
+                  value={sourceCode}
+                  type="text"
+                  placeholder="source"
+                />
+                <InputText
+                  onChange={(e) => setDemo(e.target.value)}
+                  value={demo}
+                  type="text"
+                  placeholder="demo"
+                />
+
+                <Submit
+                  onClick={(e) => onSubmitHandler(e)}
+                  type="submit"
+                  value="Add"
+                />
+              </Form>
+            </>
           )}
-
-          <ButtonCreate onClick={() => postRequest()}>
-            Create new Projects
-          </ButtonCreate>
-
-          <Form action="put">
-            <InputText
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              type="text"
-              placeholder="name"
-            />
-            <InputText
-              onChange={(e) => setImage(e.target.value)}
-              value={image}
-              type="text"
-              placeholder="image"
-            />
-            <InputText
-              onChange={(e) => setDate(e.target.value)}
-              value={date}
-              type="text"
-              placeholder="date"
-            />
-
-            <InputText
-              onChange={(e) => setStack(e.target.value)}
-              value={stack}
-              type="text"
-              placeholder="stack"
-            />
-            <TextArea
-              onChange={(e) => setDescription(e.target.value)}
-              value={description}
-              type="text"
-              placeholder="description"
-            />
-            <InputText
-              onChange={(e) => setPaas(e.target.value)}
-              value={paas}
-              type="text"
-              placeholder="paas"
-            />
-            <InputText
-              onChange={(e) => setProjectType(e.target.value)}
-              value={projectType}
-              type="text"
-              placeholder="type"
-            />
-            <InputText
-              onChange={(e) => setSourceCode(e.target.value)}
-              value={sourceCode}
-              type="text"
-              placeholder="source"
-            />
-            <InputText
-              onChange={(e) => setDemo(e.target.value)}
-              value={demo}
-              type="text"
-              placeholder="demo"
-            />
-
-            <Submit
-              onClick={(e) => onSubmitHandler(e)}
-              type="submit"
-              value="Add"
-            />
-          </Form>
+          <button onClick={() => setOpenProjectList(!openProjectList)}>
+            +
+          </button>
+          {openProjectList && (
+            <>
+              {projects.map((p) => (
+                <li key={p._id}>
+                  {p.name}
+                  <button onClick={() => onRemoveHandler(p._id)}>Delete</button>
+                </li>
+              ))}
+            </>
+          )}
         </Wrapper>
       </Container>
     </section>

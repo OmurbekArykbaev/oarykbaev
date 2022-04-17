@@ -13,7 +13,7 @@ const ProjectsPage = () => {
       .get("https://omur-api.herokuapp.com/api/projects")
       .then(({ data }) => {
         setIsLoading(false)
-        setProjects(data)
+        setProjects(data.reverse())
       })
   }, [])
 
