@@ -80,6 +80,7 @@ const Description = styled.p`
   font-size: var(--fs-md);
   line-height: 22px;
   margin-bottom: 17px;
+  z-index: 100;
 
   @media (max-width: 1024px) {
     color: var(--text-color);
@@ -91,7 +92,37 @@ const Description = styled.p`
   }
 
   @media (max-width: 768px) {
+    text-align: center;
     margin-bottom: 2rem;
+  }
+`
+
+const SocialLinks = styled.div`
+  display: flex;
+  width: 100%;
+  margin-bottom: 3rem;
+  z-index: 100;
+
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-right: 2rem;
+
+    img {
+      fill: var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
   }
 `
 const Button = styled.button`
@@ -207,4 +238,5 @@ export {
   RectGreen,
   RectOrange,
   ImageAvatar,
+  SocialLinks,
 }

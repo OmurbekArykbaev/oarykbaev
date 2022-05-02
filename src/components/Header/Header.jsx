@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Container } from "../index"
 import {
   HeaderSection,
@@ -10,6 +11,7 @@ import {
   RectGreen,
   RectOrange,
   ImageAvatar,
+  SocialLinks,
 } from "./HeaderStyled"
 
 const Header = () => {
@@ -20,14 +22,31 @@ const Header = () => {
       <Container>
         <Wrapper>
           <About>
-            <Title>Hi, I'm Omurbek Arykbaev & I'm a Front-End Developer.</Title>
+            <Title>Omurbek & I'm a Front-End Developer</Title>
             <Description>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+              Hello, i am software engineer, and i am looking for a job as
+              FrontEnd Developer. I have been learning Frontend Developing since
+              2020, i use different tools, and have some projects in portfolio,
+              you can see their <Link to="/projects">here</Link>. Also i will be
+              glad if you check my linkedin profile down bellow.
             </Description>
+            <SocialLinks>
+              <a href="https://www.linkedin.com/in/oarykbaev">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/OmurbekArykbaev">
+                <i className="fa-brands fa-github"></i>
+              </a>
+              <a href="https://t.me/Twonpix">
+                <i className="fa-brands fa-telegram"></i>
+              </a>
+              <a href="mailto:firefoxer00@gmail.com">
+                <i className="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://www.codewars.com/users/OmurbekArykbaev">
+                <img src="/img/codewars.svg" alt="" />
+              </a>
+            </SocialLinks>
             <Button>Download CV</Button>
           </About>
           <ImageAvatar src="./img/about-me1.png" alt="Author" />
