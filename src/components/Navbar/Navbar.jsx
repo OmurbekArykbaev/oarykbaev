@@ -25,13 +25,12 @@ const Navbar = () => {
             <Item>
               <LinkBtn to="/projects">Projects</LinkBtn>
             </Item>
-
-            <Item>
+            {/* <Item>
               <LinkBtn to="/">Blog</LinkBtn>
-            </Item>
-            <Item>
+            </Item> */}
+            {/* <Item>
               <LinkBtn to="/">CV</LinkBtn>
-            </Item>
+            </Item> */}
             <Item>
               <LinkBtn to="/admin">admin</LinkBtn>
             </Item>
