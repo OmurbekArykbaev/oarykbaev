@@ -72,9 +72,8 @@ const ToolsSection = () => {
             <Image src="./img/wave.png" alt="Wave" />
             <Services>What I Use.</Services>
             <Description>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla.
+              These tools wich i worked in last time, and i am working with each
+              of them that moment.
             </Description>
           </Title>
 

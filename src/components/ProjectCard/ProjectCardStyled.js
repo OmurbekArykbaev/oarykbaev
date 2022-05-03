@@ -5,6 +5,7 @@ const Card = styled(Link)`
   text-decoration: none;
   color: var(--primary-color);
   background: var(--light-color);
+  width: 360px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
