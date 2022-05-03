@@ -61,8 +61,12 @@ const PetProjectCard = ({
       </Title>
 
       <Description>
-        <Summury>Summury</Summury>
-        <Text>{description}</Text>
+        <Summury>Summury </Summury>
+        <Text>
+          {description.length > 157
+            ? `${description.slice(0, 157)} ...`
+            : description}{" "}
+        </Text>
       </Description>
 
       <CardAction>

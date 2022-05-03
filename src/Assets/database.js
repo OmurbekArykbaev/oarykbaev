@@ -1,17 +1,3 @@
-export const description = [
-  "Я Омурбек, мне 22 года. Увлекаюсь и занимаюсь программированием, а именно Front-End направлением. В 2020 окончил Технический Университет им И.Раззакова по специальности системный аналитик-программист. ",
-]
-
-export const skills = [
-  "JavaScript",
-  "React",
-  "Redux",
-  "Sass-Scss",
-  "Bootstrap 4+",
-  "GIT-GitHub",
-  "Docker",
-]
-
 export const SocialLinks = [
   {
     href: "https://github.com/OmurbekArykbaev",
