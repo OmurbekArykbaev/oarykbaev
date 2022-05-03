@@ -86,7 +86,7 @@ const MobileMenuList = styled.div`
   margin-top: 1rem;
   position: absolute;
   width: 100%;
-  height: 50vh;
+  height: 0;
   background-color: whiteSmoke;
   transition: all 0.5s;
   z-index: 101;

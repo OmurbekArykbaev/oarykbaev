@@ -15,7 +15,7 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const toggleMenu = useRef(null)
+  const toggleMenu = useRef()
 
   const openMenuHandler = () => {
     setIsOpen(!isOpen)
