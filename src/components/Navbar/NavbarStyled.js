@@ -14,20 +14,13 @@ const Wrapper = styled.div`
   justify-content: space-between;
   margin: 0 1rem;
 `
-const Logo = styled(Link)`
+const Logo = styled.h1`
   color: var(--primary-color);
   text-decoration: none;
   font-family: var(--family-src);
   font-size: 30px;
 `
-const Check = styled.input`
-  display: none;
-
-  &:checked ~ ul {
-    left: 0;
-  }
-`
-const CheckBtn = styled.label`
+const CheckBtn = styled.span`
   display: none;
   font-size: 30px;
   float: right;
@@ -86,4 +79,41 @@ const LinkBtn = styled(Link)`
   }
 `
 
-export { Nav, Wrapper, Logo, Check, CheckBtn, Items, Item, LinkBtn }
+const MobileMenuList = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  background-color: whiteSmoke;
+  transition: all 0.5s;
+  z-index: 101;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+`
+const MobileMenuItems = styled.ul`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+`
+const MobileMenuItem = styled.li`
+  a {
+    font-size: 1rem;
+  }
+`
+
+export {
+  Nav,
+  Wrapper,
+  Logo,
+  CheckBtn,
+  Items,
+  Item,
+  LinkBtn,
+  MobileMenuList,
+  MobileMenuItems,
+  MobileMenuItem,
+}

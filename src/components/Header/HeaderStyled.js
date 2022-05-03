@@ -80,7 +80,7 @@ const Description = styled.p`
   font-size: var(--fs-md);
   line-height: 22px;
   margin-bottom: 17px;
-  z-index: 100;
+  z-index: 50;
 
   @media (max-width: 1024px) {
     color: var(--text-color);
