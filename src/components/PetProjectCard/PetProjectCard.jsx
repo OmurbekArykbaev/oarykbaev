@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import {
   Card,
@@ -26,11 +26,17 @@ const PetProjectCard = ({
   sourceCode,
   id,
   views,
+  image,
 }) => {
+  const imageCard = useRef()
+
+  useEffect(() => {
+    imageCard.current.style.backgroundImage = `url(${image})`
+  })
+
   return (
     <Card>
-      <Image />
-
+      <Image ref={imageCard} />
       <Title>
         <About>
           <AboutTitle>{name}</AboutTitle>

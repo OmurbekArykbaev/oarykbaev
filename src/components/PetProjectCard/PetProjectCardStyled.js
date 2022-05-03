@@ -16,7 +16,8 @@ const Card = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 40%;
-  background-image: url(https://softwareengineeringdaily.com/wp-content/uploads/2018/11/reactComponents.png);
+  // background-image: url(https://softwareengineeringdaily.com/wp-content/uploads/2018/11/reactComponents.png);
+  // background-image: url(./img/2-website.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
