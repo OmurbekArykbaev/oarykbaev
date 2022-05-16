@@ -22,7 +22,7 @@ const Header = () => {
       <Container>
         <Wrapper>
           <About>
-            <Title>Omurbek & I'm a Front-End Developer</Title>
+            <Title>Front-End Developer & Omurbek Arykbaev</Title>
             <Description>
               Hello, i am software engineer, and i am looking for a job as
               FrontEnd Developer. I have been learning Frontend Developing since

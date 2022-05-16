@@ -14,52 +14,52 @@ import {
 
 const data = [
   {
+    id: 1,
     name: "JavaScript ES6",
     summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Knowledge about ES6 features: All types Functions, Promise, Event-Loop. Hosting, Recursion, Fetch-api, Json, OOP etc.",
     img: "./img/tools/js.png",
   },
   {
+    id: 2,
     name: "React",
     summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "React 17+: JSX, Virtual DOM, Context, Native Hooks, Custom Hooks. React-Form, work with axios requests etc.",
     img: "./img/tools/react.png",
   },
   {
+    id: 3,
     name: "Redux",
     summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Strong knowledge about Global Store, Actions, Reducer, CombineReucer etc. Work middleware as Redux thunk.",
     img: "./img/tools/redux.png",
   },
   {
+    id: 4,
     name: "Git",
     summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Basic GIT commands: git commit, git push/pull. Work with branches: git merge, git rebase, git branch -d etc.",
     img: "./img/tools/git.png",
   },
   {
-    name: "Styled-Components",
-    summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "./img/tools/styled.png",
+    id: 5,
+    name: "Sass",
+    summury: "Classic work with css, mixins, extends, variables, colors etc.",
+    img: "./img/tools/sass.png",
   },
   {
+    id: 6,
     name: "NodeJs",
     summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Have expirience with different NPM libraries such as: ExpressJs, Mongoose, Sequlize etc.",
     img: "./img/tools/node.png",
   },
   {
+    id: 7,
     name: "ExpressJs",
     summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Work with basic commands: route, get, post, put/putch, delete. Create REST-API microservise.",
     img: "./img/tools/expr.png",
-  },
-  {
-    name: "TypeScript",
-    summury:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "./img/tools/ts.png",
   },
 ]
 
@@ -80,7 +80,7 @@ const ToolsSection = () => {
           <Features>
             {data.map((tool) => (
               <ToolCard
-                key={tool.name}
+                key={tool.id}
                 name={tool.name}
                 summury={tool.summury}
                 img={tool.img}

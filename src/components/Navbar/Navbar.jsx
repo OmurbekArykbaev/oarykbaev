@@ -50,9 +50,9 @@ const Navbar = () => {
             {/* <Item>
               <LinkBtn to="/">CV</LinkBtn>
             </Item> */}
-            <Item>
+            {/* <Item>
               <LinkBtn to="/admin">admin</LinkBtn>
-            </Item>
+            </Item> */}
           </Items>
         </Wrapper>
 
