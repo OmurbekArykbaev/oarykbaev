@@ -125,11 +125,11 @@ const SocialLinks = styled.div`
     }
   }
 `
-const Button = styled.button`
+const Button = styled.a`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 200px;
+  max-width: 150px;
   border: none;
   padding: 1rem 1.5rem;
   background-color: var(--primary-color);
@@ -140,6 +140,7 @@ const Button = styled.button`
   font-weight: var(--fw-normal);
   font-size: var(--fs-md);
   line-height: 22px;
+  text-decoration: none;
 
   z-index: 1;
 `

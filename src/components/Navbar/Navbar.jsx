@@ -65,9 +65,9 @@ const Navbar = () => {
               <MobileMenuItem>
                 <LinkBtn to="/projects">Projects</LinkBtn>
               </MobileMenuItem>
-              <MobileMenuItem>
+              {/* <MobileMenuItem>
                 <LinkBtn to="/admin">admin</LinkBtn>
-              </MobileMenuItem>
+              </MobileMenuItem> */}
             </MobileMenuItems>
           )}
         </MobileMenuList>

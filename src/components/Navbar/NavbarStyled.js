@@ -49,9 +49,6 @@ const Items = styled.ul`
   }
 `
 const Item = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   list-style: none;
   margin-right: 1.5rem;
 
@@ -65,10 +62,11 @@ const LinkBtn = styled(Link)`
   font-size: var(--fs-md);
   line-height: var(--fs-md);
   text-decoration: none;
+  padding: 1.5rem 0;
   text-transform: uppercase;
 
   &:hover {
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
   }
 
   @media (max-width: 480px) {

@@ -47,9 +47,12 @@ const Header = () => {
                 <img src="/img/codewars.svg" alt="" />
               </a>
             </SocialLinks>
-            <Button>Download CV</Button>
+            <Button href="/assets/cv-test.png" download>
+              <i className="fa fa-download" />
+              Download CV
+            </Button>
           </About>
-          <ImageAvatar src="./img/about-me1.png" alt="Author" />
+          <ImageAvatar src="./img/avatar.jpeg" alt="Author" />
         </Wrapper>
       </Container>
     </HeaderSection>
