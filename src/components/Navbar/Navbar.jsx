@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useReducer, useRef, useEffect } from "react"
 import { Container } from "../index"
 import {
   Nav,
@@ -14,23 +14,24 @@ import {
 } from "./NavbarStyled.js"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, toggleIsOpen] = useReducer(state => !state, true)
   const toggleMenu = useRef()
 
-  const openMenuHandler = () => {
-    setIsOpen(!isOpen)
-
-    isOpen
-      ? (toggleMenu.current.style.height = "0")
-      : (toggleMenu.current.style.height = "50vh")
-  }
+  useEffect(() => {
+    if (isOpen) {
+      toggleMenu.current.style.height = "0"
+    }
+    else {
+      toggleMenu.current.style.height = "50vh"
+    }
+  }, [isOpen])
 
   return (
     <Nav>
       <Container>
         <Wrapper>
           <Logo>oarykbaev</Logo>
-          <CheckBtn onClick={openMenuHandler} htmlFor="check">
+          <CheckBtn onClick={toggleIsOpen} htmlFor="check">
             {isOpen ? (
               <i className="fa-solid fa-xmark" />
             ) : (
@@ -57,8 +58,8 @@ const Navbar = () => {
         </Wrapper>
 
         <MobileMenuList ref={toggleMenu}>
-          {isOpen && (
-            <MobileMenuItems onClick={openMenuHandler}>
+          {!isOpen && (
+            <MobileMenuItems onClick={toggleIsOpen}>
               <MobileMenuItem>
                 <LinkBtn to="/">Home</LinkBtn>
               </MobileMenuItem>

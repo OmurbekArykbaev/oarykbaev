@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Container } from "../../components"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { Container } from "../../components"
 import {
   Wrapper,
   ButtonCreate,
@@ -9,9 +10,10 @@ import {
   TextArea,
   Submit,
 } from "./AdminPanelPageStyled"
-import { useNavigate } from "react-router-dom"
 
 const AdminPanelPage = () => {
+  // What the hell is that?
+  // Dude, just use 'FormData'
   const navigate = useNavigate()
   const [id, setId] = useState("")
   const [name, setName] = useState("")
@@ -168,14 +170,14 @@ const AdminPanelPage = () => {
             +
           </button>
           {openProjectList && (
-            <>
-              {projects.map((p) => (
-                <li key={p._id}>
-                  {p.name}
-                  <button onClick={() => onRemoveHandler(p._id)}>Delete</button>
+            (
+              projects.map((project, index) => (
+                <li key={index}>
+                  {project.name}
+                  <button onClick={() => onRemoveHandler(project._id)}>Delete</button>
                 </li>
-              ))}
-            </>
+              ))
+            )
           )}
         </Wrapper>
       </Container>

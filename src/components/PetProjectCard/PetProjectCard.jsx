@@ -12,11 +12,19 @@ import {
   DateViews,
   Views,
   Description,
-  Summury,
+  Summary,
   Text,
   CardAction,
   DemoBtn,
 } from "./PetProjectCardStyled"
+
+const shortenIfTooBig = (text, maxLength) => {
+  if (text.length < maxLength) {
+    return text + " "
+  }
+
+  return text.slice(0, maxLength) + " ..."
+}
 
 const PetProjectCard = ({
   name,
@@ -32,7 +40,7 @@ const PetProjectCard = ({
 
   useEffect(() => {
     imageCard.current.style.backgroundImage = `url(${image})`
-  })
+  }, [image])
 
   return (
     <Card>
@@ -41,8 +49,8 @@ const PetProjectCard = ({
         <About>
           <AboutTitle>{name}</AboutTitle>
           <AboutItems>
-            {stack.map((s) => (
-              <AboutItem key={s}>{s}</AboutItem>
+            {stack.map((item, index) => (
+              <AboutItem key={index}>{item}</AboutItem>
             ))}
           </AboutItems>
         </About>
@@ -50,22 +58,16 @@ const PetProjectCard = ({
           <Date>
             <i className="fas fa-calendar-alt"></i> {date.slice(0, 7)}
           </Date>
-          {views ? (
-            <Views>
-              <i className="fa-solid fa-eye">{views}</i>
-            </Views>
-          ) : (
-            <></>
+          {views && (
+            <Views><i className="fa-solid fa-eye">{views}</i></Views>
           )}
         </DateViews>
       </Title>
 
       <Description>
-        <Summury>Summury </Summury>
+        <Summary>Summary</Summary>
         <Text>
-          {description.length > 157
-            ? `${description.slice(0, 157)} ...`
-            : description}{" "}
+          {shortenIfTooBig(description, 157)}
         </Text>
       </Description>
 

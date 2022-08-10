@@ -7,12 +7,12 @@ import {
   LinkCard,
 } from "./ToolCardStyled"
 
-const ToolCard = ({ name, summury, img }) => {
+const ToolCard = ({ name, summary, img }) => {
   return (
     <Card>
       <ImageCard src={img} alt="Name" />
       <TitleCard>{name}</TitleCard>
-      <DescriptionCard>{summury}</DescriptionCard>
+      <DescriptionCard>{summary}</DescriptionCard>
       <LinkCard to="/">Read more</LinkCard>
     </Card>
   )
