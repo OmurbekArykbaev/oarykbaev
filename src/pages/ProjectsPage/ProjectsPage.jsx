@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
-import { Container, PetProjectCard } from "../../components/"
-import { ProjectSection, Wrapper } from "./ProjectsPageStyled"
 import axios from "axios"
+
+import { Container, PetProjectCard } from "../../components/"
 import { LoadingSpin, Loading } from "../../components/Loading/Loading"
+import { ProjectSection, Wrapper } from "./ProjectsPageStyled"
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState([])
@@ -18,38 +19,24 @@ const ProjectsPage = () => {
   }, [])
 
   return (
-    <>
-      <ProjectSection>
-        <Container>
-          <Wrapper>
-            {isLoading ? (
-              <>
-                <Loading>
-                  <LoadingSpin />
-                </Loading>
-              </>
-            ) : (
-              <>
-                {projects.map((p) => (
-                  <PetProjectCard
-                    key={p._id}
-                    id={p._id}
-                    name={p.name}
-                    stack={p.stack}
-                    description={p.description}
-                    demo={p.demo}
-                    sourceCode={p.sourceCode}
-                    image={p.image}
-                    date={p.date}
-                    views={p.views}
-                  />
-                ))}
-              </>
-            )}
-          </Wrapper>
-        </Container>
-      </ProjectSection>
-    </>
+    <ProjectSection>
+      <Container>
+        <Wrapper>
+          {isLoading ? (
+            <Loading>
+              <LoadingSpin />
+            </Loading>
+          ) : (
+            (
+              projects.map((project, index) => (
+                <PetProjectCard key={index} {...project} />
+              ))
+            )
+          )
+          }
+        </Wrapper>
+      </Container>
+    </ProjectSection>
   )
 }
 

@@ -28,13 +28,14 @@ const ProjectsSection = () => {
           : setProjects(data.slice(0, data.length))
       })
   }, [])
+
   return (
     <ProjectSection>
       <Container>
         <Wrapper>
           <Title>
             <Image src="./img/wave.png" alt="Wave" />
-            <AboutTitle>My Lastest Projects</AboutTitle>
+            <AboutTitle>My Latest Projects</AboutTitle>
             <Description>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
@@ -48,11 +49,11 @@ const ProjectsSection = () => {
                 <LoadingSpin />
               </Loading>
             ) : (
-              <>
-                {projects.map((p) => (
-                  <ProjectCard key={p._id} project={p} />
-                ))}
-              </>
+              (
+                projects.map((item, index) => (
+                  <ProjectCard key={index} project={item} />
+                ))
+              )
             )}
           </Features>
           <LinkBtn to="/projects">

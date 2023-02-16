@@ -81,7 +81,7 @@ const Views = styled.p`
 const Description = styled.div`
   padding: 1rem;
 `
-const Summury = styled.h3`
+const Summary = styled.h3`
   color: #fff;
   text-transform: uppercase;
   font-size: var(--fw-sm);
@@ -131,7 +131,7 @@ export {
   DateViews,
   Views,
   Description,
-  Summury,
+  Summary,
   Text,
   CardAction,
   DemoBtn,

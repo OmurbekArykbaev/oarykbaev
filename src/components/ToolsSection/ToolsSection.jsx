@@ -70,17 +70,16 @@ const ToolsSection = () => {
         <Wrapper>
           <Title>
             <Image src="./img/wave.png" alt="Wave" />
-            <Services>What I Use.</Services>
+            <Services>My Tools</Services>
             <Description>
-              These tools wich i worked in last time, and i am working with each
-              of them that moment.
+              The tools I am experienced in and working with at that moment.
             </Description>
           </Title>
 
           <Features>
-            {data.map((tool) => (
+            {data.map((tool, index) => (
               <ToolCard
-                key={tool.id}
+                key={index}
                 name={tool.name}
                 summury={tool.summury}
                 img={tool.img}

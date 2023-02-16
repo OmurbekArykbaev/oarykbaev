@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { useParams, useNavigate } from "react-router-dom"
+import axios from "axios"
 import {
   DetailsSection,
   Wrapper,
@@ -18,14 +20,12 @@ import {
   ButtonBack,
 } from "./DetailsPageStyled"
 import { LoadingSpin, Loading } from "../../components/Loading/Loading"
-import axios from "axios"
 import { Container } from "../../components"
-import { useParams, useNavigate } from "react-router-dom"
 
 const DetailsPage = () => {
   const [projectDetail, setProjectDetail] = useState({})
-
   const [isLoading, setIsLoading] = useState(true)
+
   const navigate = useNavigate()
   const { id } = useParams()
 
@@ -45,11 +45,9 @@ const DetailsPage = () => {
         <Container>
           <Wrapper>
             {isLoading ? (
-              <>
-                <Loading>
-                  <LoadingSpin />
-                </Loading>
-              </>
+              <Loading>
+                <LoadingSpin />
+              </Loading>
             ) : (
               <>
                 <ButtonBack onClick={() => navigate("/projects")}>
@@ -62,15 +60,15 @@ const DetailsPage = () => {
                       <Image src="./img/3-website.jpg" alt="Image" />
                     </>
                   ) : (
-                    <>
-                      {projectDetail.image.map((img, index) => (
+                    (
+                      projectDetail.image.map((img, index) => (
                         <Image
-                          key={img + index}
+                          key={index}
                           src={img}
                           alt={projectDetail.name}
                         />
-                      ))}
-                    </>
+                      ))
+                    )
                   )}
                 </ImagesWrapper>
 
